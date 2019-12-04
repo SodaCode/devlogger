@@ -1,11 +1,9 @@
 <div class="card card-body mb-3">
-  <!-- TODO: make add log add to the service. Determine what DB to use. System or Mongo -->
-  <!-- TODO: make clear button clear the input value -->
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
       <input type="text" name="text" [(ngModel)]="text" class="form-control" placeholder="Add a log..">
     </div>
     <input type="submit" value="Add Log" class="btn btn-light" [disabled]="!this.text">
-    <button type="button" (click)="onClear(log)" class="btn btn-warning" [hidden]=!this.text>Clear</button>
+    <button type="button" (click)="clearState()" class="btn btn-warning" [hidden]=!this.text>Clear</button>
   </form>
 </div>
